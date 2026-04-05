@@ -1,0 +1,17 @@
+{
+    "name": "DesktopPet",
+    "rootNamespace": "DesktopPet",
+    "references": [],
+    "includePlatforms": ["Editor", "WindowsStandalone64"],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "System.Windows.Forms.dll",
+        "System.Drawing.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
