@@ -20,6 +20,9 @@ public class MovementController : MonoBehaviour
     [SerializeField] private int petWidth  = 128;
     [SerializeField] private int petHeight = 128;
 
+    [Header("렌더러")]
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+
     private PetController _pet;
     private bool   _paused;
     private float  _stateTimer;
@@ -115,6 +118,7 @@ public class MovementController : MonoBehaviour
         _screenPos += _direction * (speed * Time.deltaTime);
         ClampToBounds();
         ApplyWindowPosition();
+        ApplyFlipX();
     }
 
     private void ClampToBounds()
@@ -155,10 +159,24 @@ public class MovementController : MonoBehaviour
 
     private void ApplyWindowPosition()
     {
-        // Unity 스크린 좌표계 → Windows 픽셀 좌표계 변환 (Y 반전)
+#if UNITY_EDITOR
+        // Editor 미리보기: 픽셀 좌표 → Unity 월드 좌표로 변환해 Transform 이동
+        // (0,0) = 화면 중앙 기준, PPU=100
+        float worldX = (_screenPos.x - _screenW * 0.5f) / 100f;
+        float worldY = (_screenPos.y - _screenH * 0.5f) / 100f;
+        transform.position = new Vector3(worldX, worldY, 0f);
+#else
+        // 빌드: 윈도우 자체를 이동 (스프라이트는 창 중앙 고정)
         int winX = Mathf.RoundToInt(_screenPos.x);
         int winY = Mathf.RoundToInt(_screenH - _screenPos.y - petHeight);
         WindowPositioner.SetPosition(winX, winY);
+#endif
+    }
+
+    private void ApplyFlipX()
+    {
+        if (_spriteRenderer != null && _direction.x != 0f)
+            _spriteRenderer.flipX = _direction.x < 0f;
     }
 
     private static Vector2 RandomDirection()

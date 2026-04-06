@@ -3,7 +3,7 @@
     {
       "grade": "P1",
       "title": "Animator Controller 수동 생성",
-      "description": "Unity Editor에서 PetAnimator.controller 파일 생성 필요. docs/coat/AnimatorController_Setup.md 참고."
+      "description": "완료 — 2026-04-05"
     },
     {
       "grade": "P1",
@@ -12,13 +12,18 @@
     },
     {
       "grade": "P2",
-      "title": "스프라이트 에셋 제작",
-      "description": "Assets/Sprites/Pet/ 폴더에 idle/walk/run/sleep/sit 스프라이트 이미지 추가 필요. 128x128px, Magenta 배경."
+      "title": "실제 픽셀아트 스프라이트 교체",
+      "description": "현재 플레이스홀더(도형) 스프라이트를 실제 픽셀아트로 교체. Tools > COAT > Auto Assign Sprites로 재할당."
     },
     {
       "grade": "P2",
       "title": "TrayIcon.ico 제작",
       "description": "Assets/StreamingAssets/TrayIcon.ico 파일 필요. 16x16, 32x32 멀티 해상도 ICO."
+    },
+    {
+      "grade": "P3",
+      "title": "React 후 이전 상태 복원 실기기 검증",
+      "description": "Walk/Run 중 클릭 → React → Walk/Run 복귀 시나리오 빌드에서 확인."
     },
     {
       "grade": "P3",
