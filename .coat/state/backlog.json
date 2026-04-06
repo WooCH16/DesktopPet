@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "grade": "P1",
+      "title": "Animator Controller 수동 생성",
+      "description": "완료 — 2026-04-05"
+    },
+    {
+      "grade": "P1",
+      "title": "빌드 후 실기기 성능 실측",
+      "description": "Windows x64 빌드 후 CPU(Idle 1% 미만) / 메모리(100MB 미만) 실측 검증 필요."
+    },
+    {
+      "grade": "P2",
+      "title": "실제 픽셀아트 스프라이트 교체",
+      "description": "현재 플레이스홀더(도형) 스프라이트를 실제 픽셀아트로 교체. Tools > COAT > Auto Assign Sprites로 재할당."
+    },
+    {
+      "grade": "P2",
+      "title": "TrayIcon.ico 제작",
+      "description": "Assets/StreamingAssets/TrayIcon.ico 파일 필요. 16x16, 32x32 멀티 해상도 ICO."
+    },
+    {
+      "grade": "P3",
+      "title": "React 후 이전 상태 복원 실기기 검증",
+      "description": "Walk/Run 중 클릭 → React → Walk/Run 복귀 시나리오 빌드에서 확인."
+    },
+    {
+      "grade": "P3",
+      "title": "트레이 메뉴 About 항목",
+      "description": "TrayIconManager에 About 메뉴 추가. 버전 정보 표시."
+    },
+    {
+      "grade": "P3",
+      "title": "다중 모니터 경계 통합 테스트",
+      "description": "2개 이상 모니터 환경에서 가상 데스크탑 경계 이동 시나리오 검증."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "feature": "데스크탑펫",
+      "completedAt": "2026-04-05",
+      "round": 16,
+      "matchRate": { "기능": 98, "UX": 91, "속도": 82 },
+      "backlog": { "p1star": 0, "p1": 2, "p2": 2, "p3": 2 }
+    }
+  ]
+}
